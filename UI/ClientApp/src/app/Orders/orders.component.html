@@ -1,0 +1,27 @@
+<h1 id="tableLabel">Orders</h1>
+
+<order-form (submittedEvent)="onFormSubmitted()"></order-form>
+<!--<p *ngIf="!orders"><em>Loading...</em></p> -->
+
+<p-table *ngIf="orders" [value]="orders">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Guid</th>
+            <th>Description</th>
+            <th>Items</th>
+            <th>Net</th>
+            <th>VAT</th>
+            <th>Total Charge</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-order>
+        <tr *ngFor="let order of orders">
+            <td>{{ order.id }}</td>
+            <td>{{ order.description }}</td>
+            <td>2</td>
+            <td>£9.99</td>
+            <td>£1.89</td>
+            <td>£10.21</td>
+        </tr>
+    </ng-template>
+</p-table>  
