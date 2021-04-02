@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MenuItem} from "primeng/api";
 
 @Component({
   selector: 'app-nav-menu',
@@ -6,13 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-menu.component.css']
 })
 export class NavMenuComponent {
-  isExpanded = false;
+  items: MenuItem[];
 
-  collapse() {
-    this.isExpanded = false;
-  }
-
-  toggle() {
-    this.isExpanded = !this.isExpanded;
+  ngOnInit() {
+    this.items = [
+      {label: 'Home', icon: 'pi pi-fw pi-home'},
+      {label: 'Calendar', icon: 'pi pi-fw pi-calendar'},
+      {label: 'Edit', icon: 'pi pi-fw pi-pencil'},
+      {label: 'Documentation', icon: 'pi pi-fw pi-file'},
+      {label: 'Products', icon: 'pi pi-fw pi-cog', routerLink: 'products'}
+    ];
   }
 }

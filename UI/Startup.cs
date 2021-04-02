@@ -1,4 +1,5 @@
 using System.Reflection;
+using Inventory.Infrastructure;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,6 +32,7 @@ namespace UI
             });
 
             services.AddTransient<IOrdersContext, OrdersContext>();
+            services.AddTransient<IInventoryContext, InventoryContext>();
             services.AddMediatR(typeof(CreateOrderCommand).GetTypeInfo().Assembly);
         }
 

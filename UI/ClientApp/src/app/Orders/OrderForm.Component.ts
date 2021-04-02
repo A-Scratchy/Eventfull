@@ -1,5 +1,5 @@
 ﻿import {Component, EventEmitter, Inject, inject, Output} from '@angular/core';
-import {OrderFormModel} from './OrderFormModel';
+import {OrderFormModel} from './OrderFormMode.component';
 import {HttpClient} from "@angular/common/http";
 
 @Component({

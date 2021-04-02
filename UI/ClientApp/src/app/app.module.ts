@@ -10,10 +10,18 @@ import {HomeComponent} from './home/home.component';
 import {CounterComponent} from './counter/counter.component';
 import {FetchDataComponent} from './fetch-data/fetch-data.component';
 import {OrdersComponent} from "./Orders/orders.component";
-import {OrderFormComponent} from "./Orders/OrderFormComponent";
+import {OrderFormComponent} from "./Orders/OrderForm.Component";
 import {InputTextModule} from "primeng/inputtext";
 import {ButtonModule} from "primeng/button";
 import {TableModule} from "primeng/table";
+import {CardModule} from "primeng/card";
+import {TabMenuModule} from "primeng/tabmenu";
+import {ProductsService} from "../services/products.service";
+import {ProductsComponent} from './products/products.component';
+import { ProductFormComponent } from './products/product-form/product-form.component';
+import {InputNumberModule} from "primeng/inputnumber";
+import {SelectButtonModule} from "primeng/selectbutton";
+import {DataViewModule} from "primeng/dataview";
 
 @NgModule({
     declarations: [
@@ -23,7 +31,9 @@ import {TableModule} from "primeng/table";
         CounterComponent,
         FetchDataComponent,
         OrdersComponent,
-        OrderFormComponent
+        OrderFormComponent,
+        ProductsComponent,
+        ProductFormComponent,
     ],
     imports: [
         BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
@@ -34,12 +44,20 @@ import {TableModule} from "primeng/table";
             {path: 'counter', component: CounterComponent},
             {path: 'fetch-data', component: FetchDataComponent},
             {path: 'orders', component: OrdersComponent},
+            {path: 'products', component: ProductsComponent},
         ]),
         InputTextModule,
         ButtonModule,
-        TableModule
+        TableModule,
+        CardModule,
+        TabMenuModule,
+        InputNumberModule,
+        SelectButtonModule,
+        DataViewModule,
     ],
-    providers: [],
+    providers: [
+        ProductsService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -2,8 +2,8 @@
     <div class="p-grid p-fluid">
         <div class="p-col-12 p-md-4">
             <div class="p-inputgroup">
-                <input type="text" pInputText placeholder="Description" class="p-m-1" [(ngModel)]="model.description" >
-                <button pButton type="button" icon="pi pi-check" (click)="createOrder()" class="p-button-outlined p-button-rounded"></button>
+                <input type="text" pInputText placeholder="Description" [(ngModel)]="model.description" >
+                <button pButton type="button" label="Add" (click)="createOrder()" class="p-button"></button>
             </div>
         </div>
     </div>

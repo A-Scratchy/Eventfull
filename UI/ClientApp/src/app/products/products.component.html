@@ -1,0 +1,27 @@
+<p>products works!</p>
+<!--<app-product-form></app-product-form>-->
+<div class="p-grid">
+    <p-dataView [value]="Products">
+        <ng-template let-product pTemplate="listItem">
+            <div>
+                {{product.name}}
+            </div>
+        </ng-template>
+    </p-dataView>
+
+
+    <div *ngFor="let product of Products" class="p-col-4">
+        <p-card header="{{product.name}}" styleClass="p-card-shadow">
+            <p><b>Id: </b>{{product.productId}}</p>
+            <p><b>Category: </b>{{product.category}}</p>
+            <p><b>Quantity on hand: </b>{{product.quantity}}</p>
+            <p><b>Price: </b>{{product.price}}</p>
+            <p><b>Cost: </b>{{product.cost}}</p>
+            <ng-template pTemplate="footer">
+                <p-button label="Edit" icon="pi pi-pencil" styleClass="p-button-info"></p-button>
+                <p-button label="Delete" icon="pi pi-trash" styleClass="p-button-danger"
+                          [style]="{'margin-left': '.5em'}"></p-button>
+            </ng-template>
+        </p-card>
+    </div>
+</div>
