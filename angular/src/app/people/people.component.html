@@ -1,0 +1,20 @@
+<h1>People</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>firstName</th>
+        <th>LastName</th>
+        <th>PersonId</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let person of People">
+        <td>{{person.firstName}}</td>
+        <td>{{person.lastName}}</td>
+        <td>{{person.personId}}</td>
+        <td>{{person.email}}</td>
+    </tr>
+    </tbody>
+</table>

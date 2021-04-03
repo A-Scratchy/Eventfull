@@ -1,0 +1,23 @@
+
+div {
+  display: inline;
+  background-color: beige;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  padding: 1rem;
+  text-decoration: none;
+  color: black;
+  &:hover {
+    background-color: grey;
+    cursor: pointer;
+  }
+}
+
+.active {
+  background-color: aqua;
+}
+
