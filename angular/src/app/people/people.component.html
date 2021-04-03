@@ -5,16 +5,23 @@
     <tr>
         <th>firstName</th>
         <th>LastName</th>
-        <th>PersonId</th>
         <th>Email</th>
+        <th>Id</th>
+        <th></th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let person of People">
         <td>{{person.firstName}}</td>
         <td>{{person.lastName}}</td>
-        <td>{{person.personId}}</td>
         <td>{{person.email}}</td>
+        <td>{{person.personId}}</td>
+        <td><button (click)="onDeleteClicked(person.personId)">Delete</button></td>
+        <td><button>Edit</button></td>
     </tr>
     </tbody>
 </table>
+
+<button (click)="onAddClicked()" >Add new person</button>
+

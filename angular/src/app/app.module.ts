@@ -9,6 +9,8 @@ import {PeopleComponent} from './people/people.component';
 import {HomeComponent} from './home/home.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {HttpClientModule} from "@angular/common/http";
+import { PeopleFormComponent } from './people/people-form/people-form.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -17,12 +19,14 @@ import {HttpClientModule} from "@angular/common/http";
         ProductsComponent,
         PeopleComponent,
         HomeComponent,
-        NavbarComponent
+        NavbarComponent,
+        PeopleFormComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
-        HttpClientModule
+        HttpClientModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]
