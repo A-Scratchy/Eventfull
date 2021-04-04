@@ -4,12 +4,6 @@ import {Observable, throwError} from "rxjs";
 import {catchError, retry} from "rxjs/operators";
 import {environment} from "../../environments/environment";
 
-export interface ICreatePersonCommand {
-    firstName: string;
-    lastName: string;
-    email: string;
-}
-
 export interface IPerson {
     personId: string;
     firstName: string;
@@ -47,8 +41,8 @@ export class PeopleService {
         )
     }
 
-    public createPerson(product: ICreatePersonCommand): Observable<ICreatePersonCommand> {
-        return this.http.post<ICreatePersonCommand>(this.API_URL + '/api/people', JSON.stringify(product), this.httpHeader).pipe(
+    public createPerson(product: IPerson): Observable<IPerson> {
+        return this.http.post<IPerson>(this.API_URL + '/api/people', JSON.stringify(product), this.httpHeader).pipe(
             retry(1),
             catchError(this.httpError))
     }
@@ -64,7 +58,7 @@ export class PeopleService {
             retry(1),
             catchError(this.httpError))
     }
-    
+
     httpError(error: any) {
         let msg = '';
         if (error.error instanceof ErrorEvent) {

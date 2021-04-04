@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Courses.Infrastructure;
 using Inventory.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -44,6 +45,7 @@ namespace API_Gateway
 
             services.AddTransient<IProductContext, ProductContext>();
             services.AddTransient<IPeopleContext, PeopleContext>();
+            services.AddTransient<ICoursesContext, CoursesContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

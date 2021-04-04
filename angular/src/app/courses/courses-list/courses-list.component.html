@@ -1,0 +1,32 @@
+<h1>Courses</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Date</th>
+        <th>Capacity</th>
+        <th>Available Spaces</th>
+        <th>Modules</th>
+        <td></td>
+        <td></td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let course of Courses">
+        <td><a routerLink="/courses/{{course.courseId}}">{{course.courseId}}</a></td>
+        <td>{{course.courseDate.toString()}}</td>
+        <td>{{course.capacity}}</td>
+        <td>{{course.availableSpaces}}</td>
+        <td>{{course.modules}}</td>
+        <td>
+            <button (click)="onDeleteClicked(course.courseId)">Delete</button>
+        </td>
+        <td>
+            <button (click)="OnEditClicked(course.courseId)">Edit</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<button (click)="onAddClicked()">Add new course</button>

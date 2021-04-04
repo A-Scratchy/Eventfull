@@ -1,0 +1,17 @@
+<div *ngIf="message != null">
+    <p>{{message}}</p>
+</div>
+<h1>{{course.courseDate}}</h1>
+<h3>Capacity: {{course.capacity}}</h3>
+<h2>Delegates</h2>
+<div *ngFor="let delegate of course.courseDelegates">
+   <p>{{delegate.person.firstName}} {{delegate.person.lastName}}<p>
+</div>
+<button>Add a delegate</button>
+<h2>Modules</h2>
+<div *ngFor="let module of course.courseModules">
+    <p><b>{{module.name}}</b>: starts at {{module.startTime}}:<p>
+</div>
+<button>Add a module</button>
+<h2>Bookings</h2>
+<button>Add a booking</button>

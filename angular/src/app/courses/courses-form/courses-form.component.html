@@ -1,0 +1,11 @@
+<h1>Add a new course</h1>
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+    <label for="courseDate">Course Date</label>
+    <input type="date" placeholder="courseDate" id="courseDate" name="courseDate" [(ngModel)]="course.courseDate" required>
+    <label for="capacity">Capacity</label>
+    <input type="text" placeholder="capacity" id="capacity" name="capacity" [(ngModel)]="course.capacity" required>
+    <button [disabled]="!myForm.valid" type="submit">Save</button>
+    <button (click)="onCancelClicked()">cancel</button>
+</form>
+
+

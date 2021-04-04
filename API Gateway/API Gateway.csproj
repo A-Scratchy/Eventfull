@@ -17,6 +17,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Accounts\Accounts.csproj" />
+      <ProjectReference Include="..\Courses\Courses.csproj" />
       <ProjectReference Include="..\Inventory\Inventory.csproj" />
       <ProjectReference Include="..\Orders\Orders.csproj" />
       <ProjectReference Include="..\People\People.csproj" />

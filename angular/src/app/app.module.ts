@@ -11,6 +11,10 @@ import {NavbarComponent} from './navbar/navbar.component';
 import {HttpClientModule} from "@angular/common/http";
 import { PeopleFormComponent } from './people/people-form/people-form.component';
 import {FormsModule} from "@angular/forms";
+import { PeopleDetailComponent } from './people/people-detail/people-detail.component';
+import { CoursesListComponent } from './courses/courses-list/courses-list.component';
+import { CoursesDetailComponent } from './courses/courses-detail/courses-detail.component';
+import { CoursesFormComponent } from './courses/courses-form/courses-form.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +24,11 @@ import {FormsModule} from "@angular/forms";
         PeopleComponent,
         HomeComponent,
         NavbarComponent,
-        PeopleFormComponent
+        PeopleFormComponent,
+        PeopleDetailComponent,
+        CoursesListComponent,
+        CoursesDetailComponent,
+        CoursesFormComponent
     ],
     imports: [
         BrowserModule,

@@ -16,12 +16,16 @@
         <td>{{person.firstName}}</td>
         <td>{{person.lastName}}</td>
         <td>{{person.email}}</td>
-        <td>{{person.personId}}</td>
-        <td><button (click)="onDeleteClicked(person.personId)">Delete</button></td>
-        <td><button>Edit</button></td>
+        <td><a routerLink="/people/{{person.personId}}">{{person.personId}}</a></td>
+        <td>
+            <button (click)="onDeleteClicked(person.personId)">Delete</button>
+        </td>
+        <td>
+            <button (click)="OnEditClicked(person.personId)">Edit</button>
+        </td>
     </tr>
     </tbody>
 </table>
 
-<button (click)="onAddClicked()" >Add new person</button>
+<button (click)="onAddClicked()">Add new person</button>
 

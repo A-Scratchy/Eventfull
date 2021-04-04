@@ -27,4 +27,8 @@ export class PeopleComponent implements OnInit {
     onDeleteClicked(id: string) {
         this.peopleService.deletePerson(id).subscribe(_ => this.People = this.People.filter(p => p.personId != id));
     }
+
+    OnEditClicked(personId: string) {
+        this.route.navigate(['/people/edit', personId]);
+    }
 }
